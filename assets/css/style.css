@@ -4,7 +4,13 @@
     --muted-bg-color: #333;
     --muted-bg-font-color: #eee;
     --event-bg-color: hotpink;
-    --event-font-color: white;
+    --event-font-color: #111;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('assets/fonts/NotoSansKR-Regular.woff2') format(‘woff2’),
+        url('assets/fonts/NotoSansKR-Regular.otf') format('opentype')
 }
 
 * {
@@ -67,6 +73,9 @@ p {
     padding: 15px;
 }
 
+.uk-text-meta {
+    color: #777;
+}
 
 dl {
     padding: 10px;
