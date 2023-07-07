@@ -1,3 +1,6 @@
+env/
+piece*
+
 # Logs
 logs
 *.log

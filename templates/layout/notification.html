@@ -1,0 +1,67 @@
+<div class="notification">
+    <div class="siema notification-item">
+        <div>
+            <a href="https://m.booking.naver.com/booking/13/bizes/369432?theme=place&entry=pll&area=pll" aria-label="예약하기">
+                <span uk-icon="icon: clock"></span>
+                <span> 평일 AM 10~PM 8</span>
+            </a>
+        </div>
+        <div>
+            <a href="https://m.booking.naver.com/booking/13/bizes/369432?theme=place&entry=pll&area=pll" aria-label="예약하기">
+                <span uk-icon="icon: clock"></span>
+                <span> 토 AM 10~PM 2</span>
+            </a>
+        </div>
+        <div>
+            <a href="tel:0507-1352-5175" aria-label="전화 걸기">
+                <span uk-icon="icon: receiver"></span>
+                <span> 0507-1352-5175</span>
+            </a>
+        </div>
+        <div>
+            <a href="https://naver.me/Gd1h6pUp" aria-label="네이버 지도 바로가기">
+                <span uk-icon="icon: location"></span>
+                <span> 수원시청역 7번 출구 8m</span>
+            </a>
+        </div>
+    </div>
+    <button onclick="prev()" class="notification-item" aria-label="notification-prev">
+        <span uk-icon="icon: chevron-left"></span>
+    </button>
+    <button onclick="next()" class="notification-item" aria-label="notification-next">
+        <span uk-icon="icon: chevron-right"></span>
+    </button>
+</div>
+
+<script src="assets/js/siema.min.js"></script>
+<script>
+    const slider = new Siema({
+        selector: '.siema',
+        duration: 200,
+        easing: 'ease-out',
+        perPage: 1,
+        startIndex: 0,
+        draggable: true,
+        multipleDrag: true,
+        threshold: 20,
+        loop: true,
+        rtl: false,
+        onInit: () => {},
+        onChange: () => {},
+    });
+    
+    const prev = () => {
+        slider.prev()
+        if (select > 0) {
+            select--
+        }
+    }
+
+    const next = () => {
+        slider.next()
+        if (select >= 0) {
+            select++;
+        }
+    }
+    setInterval(()=>slider.next(), 3000)();
+</script>

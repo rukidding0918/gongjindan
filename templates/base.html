@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수원 인계동 청구경희한의원 공진단 안내</title>
+    <meta name="description" content="수원에서 10년째 진료해드리는 한의사 김형규입니다. 제가 직접 빚은 공진단은 사향이 가미된 원방공진단과 녹용이 2배로 들어가는 녹용공진단 두 종류입니다. 현재 수원 인계동 청구경희한의원의 대표원장을 맡고 있습니다.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Drug",
+            "image": [
+                "https://gongjindan.hani.one/assets/images/photo1.jpg",
+                "https://gongjindan.hani.one/assets/images/photo2.jpg",
+                "https://gongjindan.hani.one/assets/images/photo3.jpg"
+            ],
+            "name": "공진단",
+            "description": "사향이 들어간 원방공진단, 녹용이 2배인 녹용공진단 두 종류를 한의사가 한의원 내의 조제실에서 직접 조제합니다.",
+            "activeIngredient": "사향, 녹용, 당귀, 산수유 등",
+            "administrationRoute": "oral",
+            "alcoholWarning": "음주 전 드시면 간보호 효과가 있습니다. 단, 지나친 음주는 간에 해로울 수 있습니다.",
+            "breastfeedingWarning": "모유수유를 하는 출산 여성의 신생아에게 영향을 줄 수 있으므로 주의하여야 합니다.",
+            "drugUnit": ["3.75g", "5.05g"],
+            "pregnancyWarning": "사향은 임산부에게 자궁근육의 수축을 일으킬 수 있습니다.",
+            "isAvailableGenerically": true,
+            "isProprietary": false,
+            "dosageForm": "tablet",
+            "prescribingInfo": "https://www.health.kr/researchInfo/herbalMedicine3_detail.asp?idx=39",
+            "brand": {
+                "@type": "Hospital",
+                "name": "청구경희한의원",
+                "address": {
+                    "@type": "PostalAddress",
+                    "postalCode": "16490",
+                    "addressRegion": "경기",
+                    "addressLocality": "수원시 팔달구",
+                    "streetAddress": "효원로 269 에스팝타워 214호"
+                },
+                "openingHours": ["Mo-Fr 10:00-20:00", "Sa 10:00-14:00"],
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 127.0312243,
+                    "longitude": 37.2622655
+                },
+                "areaServed": "경기도 수원시, 인계동 수원시청역 인근, 화성, 동탄, 오산, 안산, 안양, 인천, 분당, 용인 등",
+                "url": "https://map.naver.com/v5/entry/place/1283292950",
+                "telephone": "0507-1352-5175",
+                "keywords": "수원, 인계동, 수원시청역 한의원",
+                "description": "추나요법은 청구경희한의원, 평일 매일 8시까지, 교정, 턱관절, 교통사고 등 추나요법으로 통증잡는 청구경희한의원입니다."
+            },
+            "relatedDrug": {
+            "@type": "Drug",
+            "name": "경옥고",
+            "description": "원방경옥고와 녹용경옥고 두 종류가 있으며 고급형과 스틱형이 있습니다."
+            },
+            "keywords": "녹용공진단, 사향공진단, 원방공진단, 공진당, 영묘사향공진단, 침향공진단"
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    </style>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/js/uikit-icons.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+<body>
+    {% include "layout/notification.html" %}
+    <!-- {% include "layout/nav.html" %} -->
+    
+    <div style="max-width:800px;margin:0 auto;">
+        <button class="event uk-button uk-width-1-1" uk-toggle="target: #event-modal" type="button">2023년 추석 명절 할인 안내(~9/31)</button>
+    </div>
+    <h1 class="brand uk-text">수원 인계동 청구경희한의원의 공진단을 소개합니다.</h1>
+    <header>
+        {% include "layout/header.html" %}
+    </header>
+
+    {% include "contents/event.html" %}
+
+    <main>
+        <section>
+            {% include "contents/making.html" %}
+            <div class="uk-margin">
+                <button class="event uk-button uk-width-1-1" uk-toggle="target: #event-modal" type="button">2023년 추석 명절 할인 안내(~9/31)</button>
+            </div>
+            {% include "contents/ingredient.html" %}
+            {% include "contents/effect.html" %}
+        </section>
+        <section>
+            {% include "contents/intake.html" %}
+            {% include "contents/pricing.html" %}
+            <div class="uk-margin">
+                <button class="event uk-button uk-width-1-1" uk-toggle="target: #event-modal" type="button">2023년 추석 명절 할인 안내(~9/31)</button>
+            </div>
+            {% include "contents/event_detail.html" %}
+            <!-- {% include "contents/kok.html" %} -->
+        </section>
+        <section>
+            {% include "information/opening.html" %}
+            {% include "information/contact.html" %}
+        </section>
+    </main>
+
+    {% include "layout/footer.html" %}
+
+</body>
+</html>
