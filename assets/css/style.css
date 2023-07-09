@@ -1,10 +1,16 @@
 :root {
     --main-bg-color: brown;
-    --main-bg-font-color: #fff;
+    --main-font-color: #fff;
+    --content-bg-color: #eee;
+    --content-font-color: #222;
     --muted-bg-color: #333;
     --muted-bg-font-color: #eee;
-    --event-bg-color: hotpink;
-    --event-font-color: #111;
+    --event-bg-color: deeppink;
+    --event-font-color: #fff;
+
+    --notification-bg-color: #eee;
+    --notification-font-color: #333;
+    --notification-height: 40px;
 }
 
 @font-face {
@@ -19,6 +25,10 @@
 
 html {
     background-color: var(--muted-bg-font-color);
+}
+
+body {
+    margin-top: var(--notification-height);
 }
 
 nav {
@@ -90,9 +100,6 @@ dt {
 
 
 /* event */
-.notification.event {
-    padding: 0;
-}
 
 h2.uk-modal-title {
     font-size: 20px;
@@ -113,6 +120,17 @@ h2.uk-modal-title {
 .event {
     background-color: var(--event-bg-color);
     color: var(--event-font-color);
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.event button {
+    background-color: inherit;
+
 }
 
 .uk-modal-body .subscribe-button {
@@ -126,7 +144,7 @@ h2.uk-modal-title {
 
 header h2 {
     background-color: var(--main-bg-color);
-    color: var(--main-bg-font-color);
+    color: var(--main-font-color);
     padding: 50px;
 }
 
@@ -185,14 +203,18 @@ footer {
 
 .notification {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 3px 10px;
-    border-bottom: 1px solid #eee;
+    background-color: var(--notification-bg-color);
+    width: 100vw;
     max-width: 800px;
-    margin: 0 auto;
 }
 
 .notification a {
-    color: #333;
+    color: var(--notification-font-color);
     text-decoration: none;
 }
 
@@ -230,7 +252,7 @@ button.notification-item {
 }
 
 ul.uk-navbar-nav li {
-    color: var(--main-bg-font-color)
+    color: var(--main-font-color)
 }
 
 
