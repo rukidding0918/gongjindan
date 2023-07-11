@@ -285,3 +285,20 @@ ul.uk-navbar-nav li {
 .research>* {
     padding: 10px;
 }
+
+.myForm {
+    border: 1px solid var(--event-bg-color);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.myFormBtn {
+    background-color: var(--event-bg-color);
+    color: var(--event-font-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}

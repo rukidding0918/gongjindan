@@ -1,4 +1,4 @@
-<div class="uk-margin-top">
+<div class="uk-margin-top myForm">
     <h3>비대면 진료 신청하기</h3>
     <form id="sendMail">
         <fieldset class="uk-fieldset">
@@ -10,28 +10,28 @@
                 <label class="uk-form-label" for="phoneNumber">전화번호</label>
                 <input class="uk-input" type="tel" name="phoneNumber" id="phoneNumber">
             </div>
-            <button class="uk-button uk-button-primary uk-width-1-1" type="submit">신청하기</button>
+            <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-top myFormBtn" type="submit">신청하기</button>
         </fieldset>
     </form>
 </div>
 
 <script>
-    const sendMailForms = document.querySelectorAll('#sendMail');
+    const sendMailForms = document.querySelector('#sendMail');
     sendMailForms.addEventListener('submit', (e) => {
         e.preventDefault();
-        var name = document.querySelector("#name").value;
-        var phoneNumber = document.querySelector("#phoneNumber").value;
+        var name = document.querySelector("#name");
+        var phoneNumber = document.querySelector("#phoneNumber");
         fetch("https://voumeezck6.execute-api.ap-northeast-2.amazonaws.com", {
             method: "POST",
             headers: {
                 Accept: "application/json",
             },
             mode: "no-cors",
-            body: JSON.stringify({ name: name, phoneNumber: phoneNumber })
+            body: JSON.stringify({ name: name.value, phoneNumber: phoneNumber.value })
         })
-            .then((res) => { res.json() })
-            .then((result) => { console.log(result) })
-        name.value = "";
-        phoneNumber.value = "";
+            .then((res) => {
+                name.value = "";
+                phoneNumber.value = "";
+            })
     });
 </script>

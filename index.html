@@ -460,23 +460,6 @@
     </div>
 </div>
 
-            <div class="uk-margin-top">
-    <form class="sendMail">
-        <fieldset class="uk-fieldset">
-            <legend class="uk-legend">비대면 진료 신청하기</legend>
-            <div class="uk-form-controls">
-                <label class="uk-form-label" for="name">이름</label>
-                <input class="uk-input" type="text" name='name' id='name'>
-            </div>
-            <div class="uk-form-controls">
-                <label class="uk-form-label" for="phoneNumber">전화번호</label>
-                <input class="uk-input" type="tel" name="phoneNumber" id="phoneNumber">
-            </div>
-            <button class="uk-button uk-button-primary uk-width-1-1" type="submit">신청하기</button>
-        </fieldset>
-    </form>
-</div>
-
             <h2>공진단 효능</h2>
 <p>부족한 기운이 보충되고 기혈순환이 좋아집니다.</p>
 <p>피로개선, 면역증강, 노화억제, 기억력과 집중력 향상 등의 효능이 있습니다.</p>
@@ -591,23 +574,6 @@
 </div>
 
 
-            <div class="uk-margin-top">
-    <form class="sendMail">
-        <fieldset class="uk-fieldset">
-            <legend class="uk-legend">비대면 진료 신청하기</legend>
-            <div class="uk-form-controls">
-                <label class="uk-form-label" for="name">이름</label>
-                <input class="uk-input" type="text" name='name' id='name'>
-            </div>
-            <div class="uk-form-controls">
-                <label class="uk-form-label" for="phoneNumber">전화번호</label>
-                <input class="uk-input" type="tel" name="phoneNumber" id="phoneNumber">
-            </div>
-            <button class="uk-button uk-button-primary uk-width-1-1" type="submit">신청하기</button>
-        </fieldset>
-    </form>
-</div>
-
 
             <!-- <div class="uk-margin-top uk-margin-bottom">
                 <div class="event">
@@ -625,6 +591,44 @@
 </div> -->
         </section>
         <section>
+            <div class="uk-margin-top myForm">
+    <h3>비대면 진료 신청하기</h3>
+    <form id="sendMail">
+        <fieldset class="uk-fieldset">
+            <div class="uk-form-controls">
+                <label class="uk-form-label" for="name">이름</label>
+                <input class="uk-input" type="text" name='name' id='name'>
+            </div>
+            <div class="uk-form-controls">
+                <label class="uk-form-label" for="phoneNumber">전화번호</label>
+                <input class="uk-input" type="tel" name="phoneNumber" id="phoneNumber">
+            </div>
+            <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-top myFormBtn" type="submit">신청하기</button>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+    const sendMailForms = document.querySelector('#sendMail');
+    sendMailForms.addEventListener('submit', (e) => {
+        e.preventDefault();
+        var name = document.querySelector("#name");
+        var phoneNumber = document.querySelector("#phoneNumber");
+        fetch("https://voumeezck6.execute-api.ap-northeast-2.amazonaws.com", {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+            },
+            mode: "no-cors",
+            body: JSON.stringify({ name: name.value, phoneNumber: phoneNumber.value })
+        })
+            .then((res) => {
+                name.value = "";
+                phoneNumber.value = "";
+            })
+    });
+</script>
+
             <h2>진료 안내</h2>
 <p>안녕하세요. 수원 인계동의 청구경희한의원 원장 김형규입니다.</p>
 <p>지난 <script type="text/javascript">
@@ -738,26 +742,7 @@
         </script> BY Bluehillclinic Suwon. All rights reserved</div>
 </footer>
 
-    <script>
-        const sendMailForms = document.querySelectorAll('form.sendMail');
-        sendMailForms.addEventListener('submit', (e) => {
-            e.preventDefault();
-            var name = document.querySelector("#name").value;
-            var phoneNumber = document.querySelector("#phoneNumber").value;
-            fetch("https://voumeezck6.execute-api.ap-northeast-2.amazonaws.com", {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                },
-                mode: "no-cors",
-                body: JSON.stringify({ name: name, phoneNumber: phoneNumber })
-            })
-                .then((res) => { res.json() })
-                .then((result) => { console.log(result) })
-            name.value = "";
-            phoneNumber.value = "";
-        });
-    </script>
+
 </body>
 
 </html>
