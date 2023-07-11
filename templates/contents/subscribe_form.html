@@ -19,7 +19,6 @@
         e.preventDefault();
         var name = document.querySelector("#name").value;
         var phoneNumber = document.querySelector("#phoneNumber").value;
-        console.log(name, phoneNumber);
         fetch("https://voumeezck6.execute-api.ap-northeast-2.amazonaws.com", {
             method: "POST",
             headers: {
@@ -28,7 +27,9 @@
             mode: "no-cors",
             body: JSON.stringify({ name: name, phoneNumber: phoneNumber })
         })
-            .then((res) => { res.json() })
-            .then((result) => { console.log(result) })
+        name.value = "";
+        phoneNumber.value = "";
+        .then((res) => { res.json() })
+        .then((result) => { console.log(result) })
     });
 </script>
