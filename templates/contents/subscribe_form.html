@@ -1,12 +1,12 @@
-<form id="sendMail">
+<form id="sendMail" class="uk-margin-top">
     <fieldset class="uk-fieldset">
         <legend class="uk-legend">비대면 진료 신청하기</legend>
         <div class="uk-form-controls">
-            <label class="uk-form-label" for="name">이름/label>
+            <label class="uk-form-label" for="name">이름</label>
             <input class="uk-input" type="text" name='name' id='name'>
         </div>
         <div class="uk-form-controls">
-            <label class="uk-form-label" for="phoneNumber">전화번호/label>
+            <label class="uk-form-label" for="phoneNumber">전화번호</label>
             <input class="uk-input" type="tel" name="phoneNumber" id="phoneNumber">
         </div>
         <button class="uk-button uk-width-1-1" type="submit">신청하기</button>
@@ -15,7 +15,7 @@
 
 <script>
     const sendMailForm = document.querySelector('#sendMail');
-    sendMailForm.addEventListener('submit', (e)=>{
+    sendMailForm.addEventListener('submit', (e) => {
         e.preventDefault();
         var name = document.querySelector("#name").value;
         var phoneNumber = document.querySelector("#phoneNumber").value;
@@ -26,9 +26,9 @@
                 Accept: "application/json",
             },
             mode: "no-cors",
-            body: JSON.stringify({name: name, phoneNumber: phoneNumber})
+            body: JSON.stringify({ name: name, phoneNumber: phoneNumber })
         })
-        .then((res)=>{res.json()})
-        .then((result)=>{console.log(result)})
+            .then((res) => { res.json() })
+            .then((result) => { console.log(result) })
     });
 </script>
