@@ -114,15 +114,11 @@
 
             {% include "contents/ingredient.html" %}
 
-            {% include "contents/subscribe_form.html" %}
-
             {% include "contents/effect.html" %}
         </section>
         <section>
             {% include "contents/intake.html" %}
             {% include "contents/pricing.html" %}
-
-            {% include "contents/subscribe_form.html" %}
 
 
             <!-- <div class="uk-margin-top uk-margin-bottom">
@@ -132,6 +128,8 @@
             <!-- {% include "contents/event_detail.html" %} -->
         </section>
         <section>
+            {% include "contents/subscribe_form.html" %}
+
             {% include "information/opening.html" %}
             {% include "information/contact.html" %}
         </section>
@@ -139,26 +137,7 @@
 
     {% include "layout/footer.html" %}
 
-    <script>
-        const sendMailForms = document.querySelectorAll('form.sendMail');
-        sendMailForms.addEventListener('submit', (e) => {
-            e.preventDefault();
-            var name = document.querySelector("#name").value;
-            var phoneNumber = document.querySelector("#phoneNumber").value;
-            fetch("https://voumeezck6.execute-api.ap-northeast-2.amazonaws.com", {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                },
-                mode: "no-cors",
-                body: JSON.stringify({ name: name, phoneNumber: phoneNumber })
-            })
-                .then((res) => { res.json() })
-                .then((result) => { console.log(result) })
-            name.value = "";
-            phoneNumber.value = "";
-        });
-    </script>
+
 </body>
 
 </html>
