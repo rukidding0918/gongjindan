@@ -96,8 +96,9 @@
         {% include "layout/header.html" %}
     </header>
 
-    {% include "contents/event.html" %}
+    <!--{% include "contents/event_modal.html" %}-->
 
+    
     <main>
         <section>
             {% include "contents/making.html" %}
@@ -107,11 +108,17 @@
             </div> -->
 
             {% include "contents/ingredient.html" %}
+
+            {% include "contents/subscribe_form.html" %}
+
             {% include "contents/effect.html" %}
         </section>
         <section>
             {% include "contents/intake.html" %}
             {% include "contents/pricing.html" %}
+
+            {% include "contents/subscribe_form.html" %}
+
             
             <!-- <div class="uk-margin-top uk-margin-bottom">
                 {% include "contents/event_button.html" %}

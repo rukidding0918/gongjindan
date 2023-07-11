@@ -227,7 +227,7 @@
 </article>
     </header>
 
-    <div class="notification">
+    <!--<div class="notification">
     <div id="event-modal" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title">2023년 추석 명절 할인 안내(~2023.09.31)</h2>
@@ -243,8 +243,9 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 
+    
     <main>
         <section>
             
@@ -453,6 +454,42 @@
         </picture>        
     </div>
 </div>
+
+            <form id="sendMail">
+    <fieldset class="uk-fieldset">
+        <legend class="uk-legend">비대면 진료 신청하기</legend>
+        <div class="uk-form-controls">
+            <label class="uk-form-label" for="name">이름/label>
+            <input class="uk-input" type="text" name='name' id='name'>
+        </div>
+        <div class="uk-form-controls">
+            <label class="uk-form-label" for="phoneNumber">전화번호/label>
+            <input class="uk-input" type="tel" name="phoneNumber" id="phoneNumber">
+        </div>
+        <button class="uk-button uk-width-1-1" type="submit">신청하기</button>
+    </fieldset>
+</form>
+
+<script>
+    const sendMailForm = document.querySelector('#sendMail');
+    sendMailForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        var name = document.querySelector("#name").value;
+        var phoneNumber = document.querySelector("#phoneNumber").value;
+        console.log(name, phoneNumber);
+        fetch("https://voumeezck6.execute-api.ap-northeast-2.amazonaws.com", {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+            },
+            mode: "no-cors",
+            body: JSON.stringify({name: name, phoneNumber: phoneNumber})
+        })
+        .then((res)=>{res.json()})
+        .then((result)=>{console.log(result)})
+    });
+</script>
+
             <h2>공진단 효능</h2>
 <p>부족한 기운이 보충되고 기혈순환이 좋아집니다.</p>
 <p>피로개선, 면역증강, 노화억제, 기억력과 집중력 향상 등의 효능이 있습니다.</p>
@@ -565,6 +602,42 @@
         </dd>
     </dl>
 </div>
+
+
+            <form id="sendMail">
+    <fieldset class="uk-fieldset">
+        <legend class="uk-legend">비대면 진료 신청하기</legend>
+        <div class="uk-form-controls">
+            <label class="uk-form-label" for="name">이름/label>
+            <input class="uk-input" type="text" name='name' id='name'>
+        </div>
+        <div class="uk-form-controls">
+            <label class="uk-form-label" for="phoneNumber">전화번호/label>
+            <input class="uk-input" type="tel" name="phoneNumber" id="phoneNumber">
+        </div>
+        <button class="uk-button uk-width-1-1" type="submit">신청하기</button>
+    </fieldset>
+</form>
+
+<script>
+    const sendMailForm = document.querySelector('#sendMail');
+    sendMailForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        var name = document.querySelector("#name").value;
+        var phoneNumber = document.querySelector("#phoneNumber").value;
+        console.log(name, phoneNumber);
+        fetch("https://voumeezck6.execute-api.ap-northeast-2.amazonaws.com", {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+            },
+            mode: "no-cors",
+            body: JSON.stringify({name: name, phoneNumber: phoneNumber})
+        })
+        .then((res)=>{res.json()})
+        .then((result)=>{console.log(result)})
+    });
+</script>
 
             
             <!-- <div class="uk-margin-top uk-margin-bottom">
