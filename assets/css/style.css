@@ -66,10 +66,23 @@ h3 {
 
 }
 
+h4 {
+    font-size: 18px;
+}
+
 p {
     font-size: 16px;
 }
 
+@media(max-width: 640px) {
+    .uk-overlay {
+        padding: 10px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+}
 
 .uk-list-hyphen>li {
     padding-left: 15px;
@@ -98,6 +111,13 @@ dt {
     font-weight: bold !important;
 }
 
+.uk-light .uk-dotnav>.uk-active>* {
+    background-color: #555;
+}
+
+.uk-light .uk-dotnav>*>* {
+    border-color: #555;
+}
 
 /* event */
 
