@@ -190,6 +190,20 @@ main {
     text-align: justify;
 }
 
+th {
+    text-align: right !important;
+}
+
+td {
+    font-size: 14px;
+    padding: 8px 8px 8px 0 !important;
+    text-align: right;
+}
+
+.uk-table {
+    max-width: 400px;
+}
+
 /* footer */
 
 footer {
@@ -273,6 +287,25 @@ ul.uk-navbar-nav li {
 
 /* Opening */
 
+.privacy * {
+    font-size: 12px !important;
+}
+
+.privacy h2 {
+    font-size: 16px !important;
+}
+
+.privacy h3 {
+    font-size: 14px !important;
+}
+
+.privacy button {
+    font-size: 16px !important;
+}
+
+#agreementBtn {
+    background-color: var(--event-bg-color);
+}
 
 /* Ingredients */
 

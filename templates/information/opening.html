@@ -1,12 +1,15 @@
 <h2>진료 안내</h2>
 <p>안녕하세요. 수원 인계동의 청구경희한의원 원장 김형규입니다.</p>
-<p>지난 <script type="text/javascript">
-    document.write(new Date().getFullYear()-2013);
-    </script>년간 수원에서 환자분들을 진료하며 여러 질환으로 고생하는 분들을 도와드렸습니다. 
-    이 곳에 오신 한 분 한 분 정성껏 치료해 드리겠습니다.</p>
-<video class="uk-margin-top" src="assets/video/main_avi.mp4" width="1800" height="1200" loop muted playsinline uk-video="autoplay: inview"></video>
+<p>지난
+    <script type="text/javascript">
+        document.write(new Date().getFullYear() - 2013);
+    </script>년간 수원에서 환자분들을 진료하며 여러 질환으로 고생하는 분들을 도와드렸습니다.
+    이 곳에 오신 한 분 한 분 정성껏 치료해 드리겠습니다.
+</p>
+<video class="uk-margin-top" src="assets/video/main_avi.mp4" width="1800" height="1200" loop muted playsinline
+    uk-video="autoplay: inview"></video>
 
-<h3>진료시간</h3>
+<h3>※ 진료시간</h3>
 <table class="uk-table uk-table-divider uk-table-small uk-table-justify">
     <thead>
         <tr>
@@ -18,28 +21,28 @@
     <tbody>
         <tr>
             <td>평일</td>
-            <td>AM 10 to PM 8</td>
-            <td>1:30 to 2:30</td>
+            <td><span style="color:black">오전 10시 ~ 저녁 8시</span></td>
+            <td>1시 30분 ~ 2시 30분</td>
         </tr>
         <tr>
             <td>토요일</td>
-            <td>AP 10 to PM 2</td>
+            <td><span style="color:black">오전 10시 ~ 오후 2시</span></td>
             <td>없음</td>
         </tr>
         <tr>
-            <td>공휴일</td>
+            <td>일ㆍ공휴일</td>
             <td>휴진</td>
             <td></td>
         </tr>
 </table>
-<h3>위치</h3>
+<h3>※ 위치</h3>
 <ul class="uk-list uk-list-hyphen">
     <li>위치 : 수원 인계동 수원시청역 7번 출구 앞</li>
     <li>주소 : 경기도 수원시 팔달구 효원로 269, 에스팝타워 2층 청구경희한의원</li>
 </ul>
 <div id="map" style="width: 100%; height: 300px; margin:0 auto;"></div>
-<script type="text/javascript" 
-	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qzhejmsgi6"></script><script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qzhejmsgi6"></script>
+<script>
     var map = new naver.maps.Map('map', {
         center: new naver.maps.LatLng(37.2622655, 127.0312243), //지도의 초기 중심 좌표
         zoom: 17, //지도의 초기 줌 레벨
@@ -74,7 +77,7 @@
 
     infowindow.open(map, marker);
 
-    naver.maps.Event.addListener(marker, 'click', function(e) {
+    naver.maps.Event.addListener(marker, 'click', function (e) {
         window.open("https://map.naver.com/v5/entry/place/1283292950")
     });
 </script>
