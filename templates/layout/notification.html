@@ -1,13 +1,15 @@
-<div class="notification">
+<div class="notification" style="z-index:1;">
     <div class="siema notification-item">
         <div>
-            <a href="https://m.booking.naver.com/booking/13/bizes/369432?theme=place&entry=pll&area=pll" aria-label="예약하기">
+            <a href="https://m.booking.naver.com/booking/13/bizes/369432?theme=place&entry=pll&area=pll"
+                aria-label="예약하기">
                 <span uk-icon="icon: clock"></span>
                 <span> 평일 AM 10~PM 8</span>
             </a>
         </div>
         <div>
-            <a href="https://m.booking.naver.com/booking/13/bizes/369432?theme=place&entry=pll&area=pll" aria-label="예약하기">
+            <a href="https://m.booking.naver.com/booking/13/bizes/369432?theme=place&entry=pll&area=pll"
+                aria-label="예약하기">
                 <span uk-icon="icon: clock"></span>
                 <span> 토 AM 10~PM 2</span>
             </a>
@@ -46,10 +48,10 @@
         threshold: 20,
         loop: true,
         rtl: false,
-        onInit: () => {},
-        onChange: () => {},
+        onInit: () => { },
+        onChange: () => { },
     });
-    
+
     const prev = () => {
         slider.prev()
         if (select > 0) {
@@ -63,5 +65,5 @@
             select++;
         }
     }
-    setInterval(()=>slider.next(), 3000);
+    setInterval(() => slider.next(), 3000);
 </script>

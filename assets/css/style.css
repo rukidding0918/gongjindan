@@ -74,6 +74,10 @@ p {
     font-size: 16px;
 }
 
+.uk-table th {
+    text-transform: none;
+}
+
 @media(max-width: 640px) {
     .uk-overlay {
         padding: 10px;
