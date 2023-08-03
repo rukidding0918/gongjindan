@@ -13,14 +13,20 @@
     --notification-height: 40px;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Noto Sans KR';
     src: url('assets/fonts/NotoSansKR-Regular.woff2') format(‘woff2’),
         url('assets/fonts/NotoSansKR-Regular.otf') format('opentype')
+} */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('assets/fonts/Pretendard-Regular.woff2') format(‘woff2’),
+        url('assets/fonts/Pretendard-Regular.otf') format('opentype')
 }
 
 * {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Pretendard-Regular' !important;
 }
 
 html {
@@ -121,6 +127,17 @@ dt {
 
 .uk-light .uk-dotnav>*>* {
     border-color: #555;
+}
+
+.special {
+    padding: 0 0 0 30px;
+}
+
+.special li::before {
+    content: "★";
+    margin-left: 5px;
+    margin-right: 5px;
+    color: red;
 }
 
 /* event */
